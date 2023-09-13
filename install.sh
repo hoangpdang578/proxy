@@ -62,8 +62,9 @@ upload_proxy() {
 
 }
 gen_data() {
+    custom_string="hoangha"
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "usr$(random)/pass$(random)/$IP4/$port/$(gen64 $IP6)"
+        echo "usr$custom_string/pass$custom_string/$IP4/$port/$(gen64 $IP6)"
     done
 }
 
